@@ -14,7 +14,7 @@ export default function Home() {
             console.log("Test 1")
             payload.append('url', url)
             console.log("Test 2")
-            fetch(`http://ec2-15-161-149-189.eu-south-1.compute.amazonaws.com/short`,
+            fetch(`https://urlshortnerapi.pavlekosutic.com/short`,
                 {
                     method: 'POST',
                     body: payload
@@ -27,7 +27,7 @@ export default function Home() {
                 })
                 .then((data) => {
                     console.log(data)
-                    const shortUrl = "http://ec2-15-161-149-189.eu-south-1.compute.amazonaws.com/".concat(data.shortUrl)
+                    const shortUrl = "https://urlshortnerapi.pavlekosutic.com/".concat(data.shortUrl)
                     setShortUrl(shortUrl)
                 })
         } catch (err) {
